@@ -29,10 +29,21 @@ TARGET_SCREEN_WIDTH := 1080
 # Inherit Common Device Tree
 $(call inherit-product, device/samsung/sm6150-common/sm6150.mk)
 
+# Fingerprint feature
+PRODUCT_PACKAGES += \
+    lineage.biometrics.fingerprint.inscreen@1.0-service.a70q
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml \
+    vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
+
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom
     
 # Overlays
 PRODUCT_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay
+    $(DEVICE_PATH)/overlay \
+    $(DEVICE_PATH)/overlay-lineage
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    $(DEVICE_PATH)/overlay-lineage/lineage-sdk

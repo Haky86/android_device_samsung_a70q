@@ -21,6 +21,9 @@ DEVICE_PATH := device/samsung/a70q
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
+# HIDL
+DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
+
 # Kernel
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=1 androidboot.usbcontroller=a600000.dwc3 firmware_class.path=/vendor/firmware_mnt/image nokaslr printk.devkmsg=on
 BOARD_KERNEL_BASE := 0x00000000
@@ -48,6 +51,10 @@ BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+
+# SELinux
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
+    $(DEVICE_PATH)/sepolicy/private
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
