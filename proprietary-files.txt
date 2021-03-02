@@ -1,0 +1,24 @@
+# Device-specific blobs - From a70qxx-user 10 QP1A.190711.020 A705FNXXU5CTK4 release-keys
+
+# Bluetooth
+etc/bluetooth/av_performance.conf
+etc/bluetooth/iop_bt.db
+
+# Firmware
+etc/firmware/nvm_tlv.bin
+etc/firmware/nvm_tlv_1.3.bin
+etc/firmware/nvm_tlv_2.1.bin
+etc/firmware/nvm_tlv_3.0.bin
+etc/firmware/nvm_tlv_3.2.bin
+etc/firmware/rampatch_tlv.img
+etc/firmware/rampatch_tlv_1.3.tlv
+etc/firmware/rampatch_tlv_2.1.tlv
+etc/firmware/rampatch_tlv_3.0.tlv
+etc/firmware/rampatch_tlv_3.2.tlv
+
+# INIT
+etc/pdp_copycache.sh
+etc/pdp_papps_copy.sh
+etc/pdp_prepare_fbe.sh
+etc/pdp_restore.sh
+etc/pdp_saveplog.sh

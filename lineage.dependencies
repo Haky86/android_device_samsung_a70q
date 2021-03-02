@@ -1,0 +1,10 @@
+[
+    {
+        "repository": "android_kernel_samsung_a70q",
+        "target_path": "kernel/samsung/a70q"
+    },
+    {
+        "repository": "android_device_samsung_sm6150-common",
+        "target_path": "device/samsung/sm6150-common"
+    }
+]
