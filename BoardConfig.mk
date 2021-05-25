@@ -18,6 +18,9 @@ include device/samsung/sm6150-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/samsung/a70q
 
+# APEX
+TARGET_FLATTEN_APEX := true
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
