@@ -10,5 +10,8 @@ hal_client_domain(hal_fingerprint_inscreen_sm6150, hal_fingerprint)
 allow hal_fingerprint_inscreen_sm6150 sysfs_lcd_writable:dir r_dir_perms;
 allow hal_fingerprint_inscreen_sm6150 sysfs_lcd_writable:file rw_file_perms;
 
-allow hal_fingerprint_inscreen_sm6150 sysfs_sec_touchscreen:dir r_dir_perms;
-allow hal_fingerprint_inscreen_sm6150 sysfs_sec_touchscreen:file rw_file_perms;
+allow hal_fingerprint_inscreen_sm6150 sysfs_sec:dir r_dir_perms;
+allow hal_fingerprint_inscreen_sm6150 sysfs_sec:file rw_file_perms;
+
+allow hal_fingerprint_inscreen_sm6150 sysfs_ss_writable:dir r_dir_perms;
+allow hal_fingerprint_inscreen_sm6150 sysfs_ss_writable:file r_file_perms;
